@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!---Required meta tags--->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta property="og:title" content="Peter's Hair Cutting Place" />
+	<meta property="og:image" content="https://michaelpereira.dev/assets/icon/logo.png" />
+	<meta property="og:description" content="Delivering High Quality Haircuts Since 1964" />
+	<meta property="og:site_name" content="Peter's Hair Cutting Place" />
+	<!---CSS--->
+	<link rel="stylesheet" href="./assets/css/styles.css" />
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<!---jQuery--->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!---Website Properties--->
+	<title>Peter's Hair Cutting Place</title>
+	<link rel="icon" href="assets/icon/logo.png" />
+</head>
+
+<body>
+	<!--------------------NavBar-------------------->
+	<nav id="navbar" class="smart-scroll">
+		<div class="nav-logo">
+			<img src="./assets/icon/logo.png" />
+		</div>
+		<ul class="nav-links">
+			<li>
+				<a id="Home-Nav" href="#home">Home</a>
+			</li>
+			<li>
+				<a id="About-Nav" href="#about">About Us</a>
+			</li>
+			<li>
+				<a id="Gallery-Nav" href="#gallery">Gallery</a>
+			</li>
+			<li>
+				<a id="Contact-Nav" href="#contact">Contact Us</a>
+			</li>
+		</ul>
+
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</nav>
+
+	<!--------------------Home-------------------->
+
+	<div id="Home">
+		<img id="logo" src="./assets/icon/logo.png" />
+		<span>
+			<button id="learnMoreBtn" onclick="document.getElementById('About-Nav').click();">
+				<span>
+					Learn More
+				</span>
+			</button>
+			<button id="bookAppointmentBtn" onclick="window.open('https://www.setmore.com/','_blank')"">
+					<span>
+						Book An Appointment
+					</span>
+				</button>
+			</span>
+		</div>
+
+		<!--------------------About-------------------->
+
+		<div id="About" class="container">
+			<h2>About Us</h2>
+			<div id="About-Content">
+				<span>
+					<img src="./assets/img/tools.jpg" style="width: 450px; height: 375px;" />
+					<span>
+						<p style="font-size: 24px; font-style: italic; padding: 60px;">Our goal is to create a memorable experience for all of our customers.
+						<br>Here at Peter's Hair Cutting Place, we are comitted to providing personalized top quality service within a friendly
+						 and professional environment. Our barbers strive to exceed your expectations, insuring that our clients dream haircut 
+						 is our number one priority.</p>
+						
+						<p style="font-size: 20px;">Proudly serving customers in Scarborough since 1964.</p>
+					</span>
+				</span>
+			</div>
+		</div>
+
+	<!--------------------Gallery-------------------->
+
+	<div id="Gallery" class="container">
+		<h2>Gallery</h2>
+		<div id="Gallery-Content">
+			<img src="./assets/img/img0.png" class="grid-item">
+			<img src="./assets/img/img1.png" class="grid-item">
+			<img src="./assets/img/img2.png" class="grid-item">
+			<img src="./assets/img/img3.png" class="grid-item">
+			<img src="./assets/img/img4.png" class="grid-item">
+			<img src="./assets/img/img5.png" class="grid-item">
+		</div>
+	</div>
+
+	<!--------------------Contact-------------------->
+
+	<div id="Contact" class="container">
+		<h2>Contact Us</h2>
+		<div id="Contact-Content">
+			<div id="Contact-Details">
+				<span>
+					<span class="material-icons">
+						place
+					</span>
+					<p>2676 Eglinton Ave E, Scarborough, ON M1K 2S3</p>
+				</span>
+
+				<span>
+					<span class="material-icons">
+						call
+					</span>
+					<p>Call Us: (416) 261-2716</p>
+				</span>
+
+				<span id="Social-Links">
+					<span>
+						<p>
+							<a href="https://www.instagram.com/petersbarbershop.to/" target="_blank">
+								<img src="./assets/icon/instagram.png" style="width: 35px; height: auto;" />
+							</a>
+						</p>
+					</span>
+					<span class="material-icons" style="font-size: 35px;">
+						email
+					</span>
+				</span>
+				<span id="Hours">
+					<span class="material-icons">
+						watch_later
+					</span>
+					<p>Business Hours</p>
+				</span>
+				<div id="Hours-Content">
+					<p>Sunday: Closed<br>Monday: Closed<br>Tuesday: 10a.m-5:30p.m
+						<br>Wednesday: 10a.m-5:30p.m<br>Thursday: 10a.m-6:30p.m
+						<br>Friday: 10a.m-6:30p.m<br>Saturday: 9a.m-3:45p.m</p>
+				</div>
+			</div>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.7079294181945!2d-79.25202008422065!3d43.7373939549997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4ce2eb1c89a15%3A0x7971bde870dbfca2!2sPeters%20Hair%20Cutting%20Place!5e0!3m2!1sen!2sca!4v1598975630124!5m2!1sen!2sca"
+				width="600" height="auto" frameborder="0" style="border-radius: 12px;" allowfullscreen=""
+				aria-hidden="false" tabindex="0"></iframe>
+		</div>
+	</div>
+	<p id="Footer-Text">All trademarks and logos are the property of their respective owners.</p>
+</body>
+
+<script src="./scripts/script.js"></script>
+
+</html>
