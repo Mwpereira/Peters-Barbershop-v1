@@ -302,8 +302,6 @@ li:hover {
 	justify-content: space-between;
 	align-items: center;
 	text-align: center;
-	width: 500px;
-	background: red;
 }
 
 #Social-Links{
@@ -340,8 +338,6 @@ li:hover {
 		scroll-margin: 20%;
 	}
 
-	
-	
 	.grid-item{
 		width: 100%;
 		height: auto;
@@ -364,6 +360,11 @@ li:hover {
 
 	p {
 		font-size: 1.2rem;
+	}
+
+	iframe{
+		margin-top: 60px;
+		width: 100%;
 	}
 
 	.container{
