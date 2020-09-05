@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 h2{
 	letter-spacing: 3px;
 	font-size: 60px;
-	padding: 120px;
+	padding: 75px 0px 75px 0px;
 }
 
 p{
@@ -30,9 +30,9 @@ p{
 .container{
 	display: flex;
 	flex-direction: column;
-	margin: 25px 50px 25px 50px;
+	margin: 145px 50px 145px 50px;
 	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-bottom: 75px;
 }
 
 /*--------------------NavBar--------------------*/
@@ -171,7 +171,7 @@ li:hover {
 #Home {
 	height: 100vh;
 	background-image: url("../img/bg.jpg");
-	background-color: white;
+	background-color: whitesmoke;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -179,6 +179,11 @@ li:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+#logo{
+	width: 425px;
+	margin: 35px;
 }
 
 #Home span{
@@ -201,12 +206,6 @@ li:hover {
 
 #Home button:hover{
 	color: black;
-}
-
-#logo{
-	width: 22%;
-	height: auto;
-	margin: 35px;
 }
 
 #learnMoreBtn{
@@ -239,11 +238,19 @@ li:hover {
 #About-Content > span{
 	display: flex;
 	flex-direction: row;
+	justify-items: center;
+	align-items: center;
+}
+
+#About-Content > span p{
+	font-size: 20px;
+	font-style: italic;
+	padding: 40px 60px 40px 60px;
 }
 
 #About-Content img{
-	height: 250px;
-	width: 350px;
+	height: 375px;
+	width: 450px;
 	border-radius: 60px;
 }
 
@@ -262,7 +269,7 @@ li:hover {
 #Gallery-Content{
 	display: grid;
 	grid-template-columns: auto auto auto;
-	justify-content: space-evenly;
+	justify-items: space-evenly;
 	align-content: space-evenly;
 	grid-gap: 60px;
 	height: auto;
@@ -294,7 +301,8 @@ li:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	width: 80%;
+	align-items: center;
+	width: 100%;
 }
 
 #Contact-Details{
@@ -304,7 +312,6 @@ li:hover {
 	align-items: center;
 	text-align: center;
 	width: 800px;
-	margin-right: 0px;
 }
 
 #Social-Links{
@@ -342,11 +349,11 @@ li:hover {
 	}
 
 	iframe{
-		width: 55%;
-		height: auto;
+		margin-top: 75px;
+		width: 100%;
+		height: 350px;
 	}
 	
-
 	.grid-item{
 		width: 100%;
 		height: auto;
@@ -356,23 +363,63 @@ li:hover {
 	}
 }
 
+
 @media only screen and (max-width: 900px) {
 
+	h1 {
+		font-size: 2.25rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	p {
+		font-size: 1rem;
+	}
+
+
+	#Home{
+		background-image: url("../img/bg-mobile.jpg");
+	}	
+
+	#Home > span{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 225px;
+	}
+
+	#Home button{
+		margin: 2.5px;
+	}
+
+	#Home img{
+		width: 350px;
+		margin: 25px;
+	}
+
+	#About-Content > span{
+		flex-direction: column;
+	}
 
 	/*----------Gallery----------*/
 	#Gallery-Content {
 		grid-template-columns: auto auto;
+		grid-gap: 20px 20px;
 	}
 
 	#Contact-Content{
 		flex-direction: column;
 	}
 
-	#Contact-Details{
-		flex-direction: column;
+	#Social-Links{
+		display: flex;
+		flex-direction: row;
 	}
 
-	#Contact-Details span{
-		flex-direction: column;
-	}
+	
 }
