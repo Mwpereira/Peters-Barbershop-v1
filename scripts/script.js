@@ -50,7 +50,7 @@ navBackground();
 let scrollMargin = 0;
 
 if (window.innerWidth > 1600) {
-	scrollMargin = 35;
+	scrollMargin = 10;
 } else {
 	scrollMargin = window.innerHeight * 0.15;
 }
@@ -97,3 +97,31 @@ $("#Contact-Nav").click(function () {
 	);
 	return false;
 });
+
+let n = 1;
+
+function plusSlides(n) {
+	this.showImages((slideIndex += n));
+}
+function currentSlide(n) {
+	this.showImages((slideIndex = n));
+}
+function showImages(n) {
+	var i;
+	var slides = document.getElementsByClassName('images');
+	var dots = document.getElementsByClassName('dot');
+	if (n > slides.length) {
+		slideIndex = 1;
+	}
+	if (n < 1) {
+		slideIndex = slides.length;
+	}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = 'none';
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(' active', '');
+	}
+	slides[slideIndex - 1].style.display = 'block';
+	dots[slideIndex - 1].className += ' active';
+}

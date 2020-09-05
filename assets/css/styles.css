@@ -10,10 +10,6 @@ div {
 }
 
 body{
-	font-family: 'Lora', serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -226,37 +222,38 @@ li:hover {
 }
 
 #About-Content {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-items: space-evenly;
+	align-content: space-evenly;
+	grid-gap: 60px;
+	height: auto;
+}
+
+#About > span{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
 	text-align: center;
-	height: 100%;
-	width: 80%;
-}
-
-#About-Content > span{
-	display: flex;
-	flex-direction: row;
 	justify-items: center;
 	align-items: center;
+	margin: 30px;
+	width: 50%;
 }
 
-#About-Content > span p{
+#About > span p{
 	font-size: 20px;
 	font-style: italic;
-	padding: 40px 60px 40px 60px;
+	padding: 40px 60px 10px 60px;
 }
 
 #About-Content img{
-	height: 375px;
-	width: 450px;
+	height: 350px;
+	width: 400px;
 	border-radius: 60px;
 }
 
-#About-Content p{
+#About p{
 	width: 100%;
-	padding: 20px;
 }
 
 /*--------------------Gallery--------------------*/
@@ -308,10 +305,9 @@ li:hover {
 #Contact-Details{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	text-align: center;
-	width: 800px;
 }
 
 #Social-Links{
@@ -349,7 +345,7 @@ li:hover {
 	}
 
 	iframe{
-		margin-top: 75px;
+		margin-top: 60px;
 		width: 100%;
 		height: 350px;
 	}
@@ -365,7 +361,7 @@ li:hover {
 
 
 @media only screen and (max-width: 900px) {
-
+	/*----------HTMLPage----------*/
 	h1 {
 		font-size: 2.25rem;
 	}
@@ -374,15 +370,15 @@ li:hover {
 		font-size: 3rem;
 	}
 
-	h3 {
-		font-size: 1rem;
-	}
-
 	p {
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 
+	.container{
+		margin: 20px 50px 20px 50px;
+	}
 
+	/*----------Home----------*/
 	#Home{
 		background-image: url("../img/bg-mobile.jpg");
 	}	
@@ -397,13 +393,19 @@ li:hover {
 		margin: 2.5px;
 	}
 
-	#Home img{
-		width: 350px;
+	#logo{
+		width: 275px;
 		margin: 25px;
 	}
 
+	/*----------About----------*/
+
 	#About-Content > span{
 		flex-direction: column;
+	}
+
+	#About-Content > span p{
+		padding: 60px 0px 0px 0px;
 	}
 
 	/*----------Gallery----------*/
@@ -420,6 +422,4 @@ li:hover {
 		display: flex;
 		flex-direction: row;
 	}
-
-	
 }
