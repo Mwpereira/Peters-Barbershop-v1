@@ -15,18 +15,18 @@ body{
 
 h2{
 	letter-spacing: 3px;
-	font-size: 60px;
-	padding: 75px 0px 75px 0px;
+	font-size: 3.75rem;
+	margin-bottom: 75px;
 }
 
 p{
-	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 .container{
 	display: flex;
 	flex-direction: column;
-	margin: 50px 50px 50px 50px;
+	margin: 5.3125rem 5.3125rem 5.3125rem 5.3125rem;
 	padding-top: 50px;
 	padding-bottom: 75px;
 }
@@ -62,7 +62,7 @@ nav h2 {
 .nav-links {
 	display: flex;
 	justify-content: space-around;
-	width: 600px;
+	width: 37.5rem;
 }
 
 .nav-links li {
@@ -175,15 +175,16 @@ li:hover {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 #logo{
-	width: 425px;
-	margin: 35px;
+	width: 26.5625rem;
+	margin-bottom: 1.875rem;
 }
 
 #Home span{
-	margin-bottom: 175px;
+	margin-bottom: 10.9375rem;
 }
 
 #Home button{
@@ -226,8 +227,18 @@ li:hover {
 	grid-template-columns: auto auto auto;
 	justify-items: space-evenly;
 	align-content: space-evenly;
-	grid-gap: 60px;
+	text-align: center;
+	grid-gap: 10rem;
 	height: auto;
+}
+
+#About-Content p{
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 3.125rem;
+	font-family: 'Merienda One', cursive;
+  	color: rgba(0,0,0,0.7);
+  	text-shadow: 3px 3px 3px #fff;
 }
 
 #About > span{
@@ -236,18 +247,23 @@ li:hover {
 	text-align: center;
 	justify-items: center;
 	align-items: center;
-	margin: 30px;
-	width: 900px;
+	margin: 1.875rem;
+	width: 56.25rem;
 }
 
 #About > span p{
 	font-size: 20px;
 	font-style: italic;
-	padding: 40px 60px 10px 60px;
+	padding: 0.5rem 3.75rem 0.625rem 3.75rem;
 }
 
-#About p{
-	width: 100%;
+.grid-item-a {
+	border-radius: 16px;
+	width: 20rem;
+	height: 25rem;
+	justify-items: center;
+	align-items: center;
+	box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 /*--------------------Gallery--------------------*/
@@ -262,14 +278,17 @@ li:hover {
 	grid-template-columns: auto auto auto;
 	justify-items: space-evenly;
 	align-content: space-evenly;
-	grid-gap: 60px;
+	grid-gap: 3.75rem;
 	height: auto;
 }
 
-.grid-item {
+.grid-item-g {
 	border-radius: 16px;
-	width: 400px;
-	height: 400px;
+	width: 25rem;
+	height: 25rem;
+	justify-items: center;
+	align-items: center;
+	box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 /*--------------------Contact--------------------*/
@@ -277,6 +296,7 @@ li:hover {
 #Contact{
 	justify-content: space-evenly;
 	align-items: center;
+	margin-bottom: 0rem;
 }
 
 #Contact span{
@@ -291,7 +311,7 @@ li:hover {
 #Contact-Content{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: center;
 	width: 100%;
 }
@@ -315,7 +335,7 @@ li:hover {
 }
 
 #Hours{
-	margin-top: 20px;
+	margin-top: 1.25rem;
 }
 
 #Hours-Content p{
@@ -326,11 +346,17 @@ li:hover {
 	width: 100%;
 	text-align: center;
 	font-size: 12px;
-	padding: 50px 50px 0px 50px;
-	margin-bottom: 25px;
+	padding: 3.125rem 3.125rem 0rem 3.125rem;
+	margin-bottom: 1.5625rem;
 }
 
 /*--------------------MediaQueries--------------------*/
+
+@media only screen and (max-width: 1024px) {
+	body{
+		background: red;
+	}
+}
 
 @media only screen and (max-width: 1540px) {
 	/*----------HTMLPage----------*/
