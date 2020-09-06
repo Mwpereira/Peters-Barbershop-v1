@@ -259,7 +259,7 @@ li:hover {
 #About > span p{
 	font-size: 20px;
 	font-style: italic;
-	padding: 0.5rem 3.75rem 0.625rem 3.75rem;
+	padding: 2.5rem 3.75rem 0.625rem 3.75rem;
 }
 
 .grid-item-a {
@@ -365,11 +365,6 @@ li:hover {
 		display: none;
 	}
 
-	/*----------Gallery----------*/
-	#Gallery-Content {
-		grid-template-columns: auto auto;
-		grid-gap: 5em 7em;
-	}
 
 }
 
@@ -379,10 +374,9 @@ li:hover {
 		scroll-margin: 20%;
 	}
 
-	.grid-item{
+	.grid-item-g{
 		width: 100%;
 		height: auto;
-		grid-gap: 0px 0px;
 		justify-items: center;
 		align-items: center;
 	}
@@ -426,6 +420,14 @@ li:hover {
 	#About > span{
 		width: 100%;
 	}
+
+	
+	/*----------Gallery----------*/
+	#Gallery-Content {
+		grid-template-columns: auto auto;
+		grid-gap: 1em 1em;
+	}
+
 
 	#Contact-Content{
 		flex-direction: column;
@@ -475,16 +477,7 @@ li:hover {
  .prev:hover, .next:hover {
 	background-color: rgba(0,0,0,0.8);
   }
-  
-  #Crew p {
-	color: #f2f2f2;
-	font-size: 15px;
-	padding: 8px 12px;
-	position: absolute;
-	bottom: 8px;
-	width: 100%;
-	text-align: center;
-  }
+
   
   .numbertext {
 	color: #f2f2f2;
