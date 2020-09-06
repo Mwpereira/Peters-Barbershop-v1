@@ -16,6 +16,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!---Javascript--->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>	
 	<!---jQuery--->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<!---Website Properties--->
@@ -55,7 +58,7 @@
 	<div id="Home">
 		<img id="logo" src="./assets/icon/logo.png" />
 		<span>
-			<button id="learnMoreBtn" onclick="document.getElementById('About-Nav').click();">
+			<button id="learnMoreBtn" onclick="$('#About-Nav').click();">
 				<span>
 					Learn More
 				</span>
@@ -69,21 +72,54 @@
 	</div>
 
 	<!--------------------About-------------------->
-	<div id="About" class="container">
+	<div id="About" class="container" data-aos="fade-right">
 			<h2>Our Crew</h2>
 			<div id="About-Content">
-				<span>
-					<img src="./assets/img/peter.jpg" class="grid-item-a">
-					<p>Peter</p>
-				</span>
-				<span>
-					<img src="./assets/img/marcello.jpg" class="grid-item-a">
-					<p>Marcello</p>
-				</span>
-				<span>
-					<img src="./assets/img/sebastian.png" class="grid-item-a">
-					<p>Sebastian</p>
-				</span>
+				<div id="Crew">
+					<span>
+						<img src="./assets/img/peter.jpg" class="grid-item-a">
+						<p>Peter</p>
+					</span>
+					<span>
+						<img src="./assets/img/marcello.jpg" class="grid-item-a">
+						<p>Marcello</p>
+					</span>
+					<span>
+						<img src="./assets/img/sebastian.jpg" class="grid-item-a">
+						<p>Sebastian</p>
+					</span>
+				</div>
+				<div id="Carousel">
+					<span class="slideshow-container">
+						<span class="images fade">
+							<img src="./assets/img/peter.jpg" class="grid-item-a" />
+							<p>Peter</p>
+						</span>
+						<span class="images fade">
+							<img src="./assets/img/marcello.jpg" class="grid-item-a" />
+							<p>Marcello</p>
+						</span>
+						<span class="images fade">
+							<img src="./assets/img/sebastian.jpg" class="grid-item-a" />
+							<p>Sebastian</p>
+						</span>
+					
+						<span>
+
+						
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
+							
+					</span>
+					<br />
+
+					<div style="text-align:center; margin-top: 20px;">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+					</div>
+					
+				</div>
 			</div>
 			<span>
 				<p>Our goal is to create a memorable experience for all of our customers.
@@ -96,7 +132,7 @@
 	</div>
 
 	<!--------------------Gallery-------------------->
-	<div id="Gallery" class="container">
+	<div id="Gallery" class="container" data-aos="fade-right">
 		<h2>Gallery</h2>
 		<div id="Gallery-Content">
 			<img src="./assets/img/img0.jpg" class="grid-item-g">
@@ -109,7 +145,7 @@
 	</div>
 
 	<!--------------------Contact-------------------->
-	<div id="Contact" class="container">
+	<div id="Contact" class="container" data-aos="fade-right">
 		<h2>Contact Us</h2>
 		<div id="Contact-Content">
 			<div id="Contact-Details">
@@ -124,7 +160,7 @@
 					<span class="material-icons">
 						call
 					</span>
-					<p>Call Us: (416) 261-2716</p>
+					<p>Call Us: <a href="tel:4162612716">(416) 261-2716</a></p>
 				</span>
 				<span id="Social-Links">
 					<span>
@@ -155,8 +191,12 @@
 		</div>
 	</div>
 	<p id="Footer-Text">All trademarks and logos are the property of their respective owners.</p>
-	</body>
+	<script>
+		AOS.init();
+	  </script>	
 
 <script src="./scripts/script.js"></script>
+
+</body>
 
 </html>

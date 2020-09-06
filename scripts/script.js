@@ -55,8 +55,6 @@ if (window.innerWidth > 1600) {
 	scrollMargin = window.innerHeight * 0.15;
 }
 
-$("#Home-Nav").addClass("active");
-
 $("#Home-Nav").click(function () {
 	$("html, body").animate(
 		{
@@ -88,7 +86,6 @@ $("#Gallery-Nav").click(function () {
 });
 
 $("#Contact-Nav").click(function () {
-	$(this).addClass("active");
 	$("html,body ").animate(
 		{
 			scrollTop: $("#Contact").offset().top - scrollMargin,
@@ -98,30 +95,30 @@ $("#Contact-Nav").click(function () {
 	return false;
 });
 
-let n = 1;
+/*----------Carousel----------*/
+var slideIndex = 1;
+showSlides(slideIndex);
 
 function plusSlides(n) {
-	this.showImages((slideIndex += n));
+  showSlides(slideIndex += n);
 }
+
 function currentSlide(n) {
-	this.showImages((slideIndex = n));
+  showSlides(slideIndex = n);
 }
-function showImages(n) {
-	var i;
-	var slides = document.getElementsByClassName('images');
-	var dots = document.getElementsByClassName('dot');
-	if (n > slides.length) {
-		slideIndex = 1;
-	}
-	if (n < 1) {
-		slideIndex = slides.length;
-	}
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = 'none';
-	}
-	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(' active', '');
-	}
-	slides[slideIndex - 1].style.display = 'block';
-	dots[slideIndex - 1].className += ' active';
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("images");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
