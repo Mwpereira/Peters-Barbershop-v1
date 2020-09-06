@@ -17,7 +17,6 @@ h2{
 	letter-spacing: 3px;
 	font-size: 3.75rem;
 	margin-bottom: 75px;
-	width: 17.5rem;
 	text-align: center;
 }
 
@@ -28,9 +27,8 @@ p{
 .container{
 	display: flex;
 	flex-direction: column;
-	margin: 5.3125rem 5.3125rem 5.3125rem 5.3125rem;
-	padding-top: 50px;
-	padding-bottom: 75px;
+	padding: 5.3125rem 5.3125rem 5.3125rem 5.3125rem;
+	width: 100%;
 }
 
 /*--------------------NavBar--------------------*/
@@ -224,10 +222,6 @@ li:hover {
 	align-items: center;
 }
 
-#Carousel{
-	display: none;
-}
-
 #Crew {
 	display: grid;
 	grid-template-columns: auto auto auto;
@@ -239,10 +233,7 @@ li:hover {
 }
 
 #Carousel{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	display: none;
 }
 
 #About-Content p{
@@ -275,8 +266,6 @@ li:hover {
 	border-radius: 16px;
 	width: 20rem;
 	height: 25rem;
-	justify-items: center;
-	align-items: center;
 	box-shadow: 3px 3px 5px 6px #ccc;
 }
 
@@ -374,7 +363,6 @@ li:hover {
 		display: none;
 	}
 
-
 }
 
 @media only screen and (max-width: 1540px) {
@@ -384,7 +372,7 @@ li:hover {
 	}
 
 	.carousel-item-a{
-		width: 70%;
+		width: 17.5em;
 		height: auto;
 	}
 
@@ -407,7 +395,7 @@ li:hover {
 	}
 
 	.container{
-		margin: 20px 50px 20px 50px;
+		padding: 20px 50px 20px 50px;
 	}
 
 	/*----------Home----------*/
@@ -455,22 +443,16 @@ li:hover {
 
 /*----------Carousel----------*/
 .slideshow-container {
-	max-width: 1000px;
-	position: relative;
-	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
   }
-  
-  .images {
-	display: none;
-  }
-  
+    
   .prev, .next {
 	cursor: pointer;
-	position: absolute;
-	top: 50%;
 	width: auto;
-	margin-top: -75px;
-	padding: 16px;
+	padding: 8px;
 	color: black;
 	font-weight: bold;
 	font-size: 18px;
@@ -478,29 +460,11 @@ li:hover {
 	border-radius: 0 3px 3px 0;
 	user-select: none;
   }
-
-  .prev{
-	left: -3.5rem;
-  }
-  
-  .next {
-	left: 21rem;
-	border-radius: 3px 0 0 3px;
-  }
   
  .prev:hover, .next:hover {
 	background-color: rgba(0,0,0,0.8);
   }
 
-  
-  .numbertext {
-	color: #f2f2f2;
-	font-size: 12px;
-	padding: 8px 12px;
-	position: absolute;
-	top: 0;
-  }
-  
   .dot {
 	cursor: pointer;
 	height: 15px;

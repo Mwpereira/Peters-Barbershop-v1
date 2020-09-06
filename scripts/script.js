@@ -50,7 +50,7 @@ navBackground();
 let scrollMargin = 0;
 
 if (window.innerWidth > 1600) {
-	scrollMargin = 60;
+	scrollMargin = 20;
 } else {
 	scrollMargin = window.innerHeight * 0.15;
 }
