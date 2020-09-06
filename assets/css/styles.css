@@ -252,14 +252,14 @@ li:hover {
 	text-align: center;
 	justify-items: center;
 	align-items: center;
-	margin: 1.875rem;
+	
 	width: 56.25rem;
 }
 
 #About > span p{
 	font-size: 20px;
 	font-style: italic;
-	padding: 2.5rem 3.75rem 0.625rem 3.75rem;
+	padding: 1.5rem 3.75rem 0.625rem 3.75rem;
 }
 
 .carousel-item-a {
