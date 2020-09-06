@@ -17,6 +17,8 @@ h2{
 	letter-spacing: 3px;
 	font-size: 3.75rem;
 	margin-bottom: 75px;
+	width: 17.5rem;
+	text-align: center;
 }
 
 p{
@@ -236,6 +238,13 @@ li:hover {
 	height: auto;
 }
 
+#Carousel{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
 #About-Content p{
 	font-size: 28px;
 	font-weight: 700;
@@ -262,7 +271,7 @@ li:hover {
 	padding: 2.5rem 3.75rem 0.625rem 3.75rem;
 }
 
-.grid-item-a {
+.carousel-item-a {
 	border-radius: 16px;
 	width: 20rem;
 	height: 25rem;
@@ -374,6 +383,11 @@ li:hover {
 		scroll-margin: 20%;
 	}
 
+	.carousel-item-a{
+		width: 70%;
+		height: auto;
+	}
+
 	.grid-item-g{
 		width: 100%;
 		height: auto;
@@ -425,7 +439,7 @@ li:hover {
 	/*----------Gallery----------*/
 	#Gallery-Content {
 		grid-template-columns: auto auto;
-		grid-gap: 1em 1em;
+		grid-gap: 3em 1em;
 	}
 
 
