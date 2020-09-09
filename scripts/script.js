@@ -50,7 +50,7 @@ navBackground();
 let scrollMargin = 0;
 
 if (window.innerWidth > 1600) {
-	scrollMargin = 25;
+	scrollMargin = 35;
 }
 
 $("#Home-Nav").click(function () {
