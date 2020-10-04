@@ -77,47 +77,44 @@
 			<div id="About-Content">
 				<div id="Crew">
 					<span>
-						<img src="./assets/img/peter.jpg" class="carousel-item-a">
+						<img src="./assets/img/peter.jpg" class="carousel-item-c">
 						<p>Peter</p>
 					</span>
 					<span>
-						<img src="./assets/img/marcello.jpg" class="carousel-item-a">
+						<img src="./assets/img/marcello.jpg" class="carousel-item-c">
 						<p>Marcello</p>
 					</span>
 					<span>
-						<img src="./assets/img/sebastian.jpg" class="carousel-item-a">
+						<img src="./assets/img/sebastian.jpg" class="carousel-item-c">
 						<p>Sebastian</p>
 					</span>
 				</div>
-				<div id="Carousel">
+				<div id="Carousel-Crew">
 					<span class="slideshow-container">
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="prev" onclick="plusSlidesCrew(-1)">&#10094;</a>
 
-						<span class="images fade">
-							<img src="./assets/img/peter.jpg" class="carousel-item-a" />
-							<p>Peter</p>
+						<span class="images-c fade">
+							<img src="./assets/img/peter.jpg" class="carousel-item-c" />
 						</span>
-						<span class="images fade">
-							<img src="./assets/img/marcello.jpg" class="carousel-item-a" />
-							<p>Marcello</p>
+						<span class="images-c fade">
+							<img src="./assets/img/marcello.jpg" class="carousel-item-c" />
 						</span>
-						<span class="images fade">
-							<img src="./assets/img/sebastian.jpg" class="carousel-item-a" />
-							<p>Sebastian</p>
+						<span class="images-c fade">
+							<img src="./assets/img/sebastian.jpg" class="carousel-item-c" />
 						</span>
 					
 						<span>
-
-						<a class="next" onclick="plusSlides(+1)">&#10095;</a>
-							
+							<a class="next" onclick="plusSlidesCrew(+1)">&#10095;</a>	
 						</span>
-					<br />
+						<br />
 					</span>
 
+					<p id="BarberName">Michael</p>
+				
 					<div style="text-align:center;">
-							<span class="dot" onclick="currentSlide(1)"></span>
-							<span class="dot" onclick="currentSlide(2)"></span>
-							<span class="dot" onclick="currentSlide(3)"></span>
+							<span class="dot-c" onclick="currentSlideCrew(1)"></span>
+							<span class="dot-c" onclick="currentSlideCrew(2)"></span>
+							<span class="dot-c" onclick="currentSlideCrew(3)"></span>
 					</div>
 					
 				</div>
@@ -142,6 +139,45 @@
 			<img src="./assets/img/img3.jpg" class="grid-item-g">
 			<img src="./assets/img/img4.jpg" class="grid-item-g">
 			<img src="./assets/img/img5.jpg" class="grid-item-g">
+		</div>
+		<div id="Carousel-Gallery">
+			<span class="slideshow-container">
+				<a class="prev" onclick="plusSlidesGallery(-1)">&#10094;</a>
+			
+				<span class="images-g fade">
+					<img src="./assets/img/img0.jpg" class="carousel-item-g" />
+				</span>
+				<span class="images-g fade">
+					<img src="./assets/img/img1.jpg" class="carousel-item-g" />
+				</span>
+				<span class="images-g fade">
+					<img src="./assets/img/img2.jpg" class="carousel-item-g" />
+				</span>
+				<span class="images-g fade">
+					<img src="./assets/img/img3.jpg" class="carousel-item-g" />
+				</span>
+				<span class="images-g fade">
+					<img src="./assets/img/img4.jpg" class="carousel-item-g" />
+				</span>
+				<span class="images-g fade">
+					<img src="./assets/img/img5.jpg" class="carousel-item-g" />
+				</span>
+			
+				<span>
+					<a class="next" onclick="plusSlidesGallery(+1)">&#10095;</a>
+				</span>
+				<br />
+			</span>
+
+			<div style="text-align:center;">
+					<span class="dot-g" onclick="currentSlideGallery(1)"></span>
+					<span class="dot-g" onclick="currentSlideGallery(2)"></span>
+					<span class="dot-g" onclick="currentSlideGallery(3)"></span>
+					<span class="dot-g" onclick="currentSlideGallery(4)"></span>
+					<span class="dot-g" onclick="currentSlideGallery(5)"></span>
+					<span class="dot-g" onclick="currentSlideGallery(6)"></span>
+			</div>
+			
 		</div>
 	</div>
 

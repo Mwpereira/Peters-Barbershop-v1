@@ -93,30 +93,68 @@ $("#Contact-Nav").click(function () {
 	return false;
 });
 
-/*----------Carousel----------*/
-var slideIndex = 1;
-showSlides(slideIndex);
+/*----------Carousel for Crew----------*/
+var slideIndexCrew = 1;
+showSlidesCrew(slideIndexCrew);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlidesCrew(n) {
+  showSlidesCrew(slideIndexCrew += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlideCrew(n) {
+  showSlidesCrew(slideIndexCrew = n);
 }
 
-function showSlides(n) {
+function showSlidesCrew(n) {
   var i;
-  var slides = document.getElementsByClassName("images");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  var slides = document.getElementsByClassName("images-c");
+  var dots = document.getElementsByClassName("dot-c");
+  if (n > slides.length) {slideIndexCrew = 1}
+  if (n < 1) {slideIndexCrew = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideIndexCrew-1].style.display = "block";
+  dots[slideIndexCrew-1].className += " active";
+
+  if(n==1 || n==4){
+	document.getElementById("BarberName").innerText = "Peter";
+  }
+  if(n==2){
+	document.getElementById("BarberName").innerText = "Marcello";
+  }
+  if(n==3 || n==0){
+	document.getElementById("BarberName").innerText = "Sebastian";
+  }
+}
+
+/*----------Carousel for Gallery----------*/
+var slideIndexGallery = 1;
+showSlidesGallery(slideIndexGallery);
+
+function plusSlidesGallery(n) {
+  showSlidesGallery(slideIndexGallery += n);
+}
+
+function currentSlideGallery(n) {
+  showSlidesGallery(slideIndexGallery = n);
+}
+
+function showSlidesGallery(n) {
+  var i;
+  var slides = document.getElementsByClassName("images-g");
+  var dots = document.getElementsByClassName("dot-g");
+  if (n > slides.length) {slideIndexGallery = 1}
+  if (n < 1) {slideIndexGallery = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndexGallery-1].style.display = "block";
+  dots[slideIndexGallery-1].className += " active";
 }

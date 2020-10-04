@@ -5,6 +5,10 @@
 	box-sizing: border-box;
 }
 
+html{
+	background-color: white;
+}
+
 div {
 	display: block;
 }
@@ -15,7 +19,7 @@ body{
 
 h2{
 	letter-spacing: 3px;
-	font-size: 3.75rem;
+	font-size: 3rem;
 	margin-bottom: 50px;
 	text-align: center;
 }
@@ -174,12 +178,12 @@ li:hover {
 }
 
 #logo{
-	width: 26.5625rem;
-	margin-bottom: 1.875rem;
+	width: 23.5%;
+	margin: 1.03vh;
 }
 
-#Home span{
-	margin-bottom: 10.9375rem;
+#Home > span{
+	margin-bottom: 19.09vh;
 }
 
 #Home button{
@@ -223,16 +227,15 @@ li:hover {
 	justify-items: space-evenly;
 	align-content: space-evenly;
 	text-align: center;
-	grid-gap: 10rem;
+	grid-gap: 4rem;
 	height: auto;
 }
 
-#Carousel{
+#Carousel-Crew{
 	display: none;
 }
 
 #About-Content p{
-	font-size: 28px;
 	font-weight: 700;
 	line-height: 5rem;
 	font-family: 'Merienda One', cursive;
@@ -251,16 +254,19 @@ li:hover {
 }
 
 #About > span p{
-	font-size: 20px;
 	font-style: italic;
-	padding: 1.5rem 3.75rem 0.625rem 3.75rem;
+	margin: 1.5rem 3.75rem 0.625rem 3.75rem;
 }
 
-.carousel-item-a {
+.carousel-item-c {
 	border-radius: 16px;
 	width: 20rem;
 	height: 25rem;
 	box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+#Crew, #Carousel-Crew p{
+	font-size: 1.35rem;
 }
 
 /*--------------------Gallery--------------------*/
@@ -268,6 +274,10 @@ li:hover {
 #Gallery{
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+#Carousel-Gallery{
+	display: none;
 }
 
 #Gallery-Content{
@@ -337,7 +347,7 @@ li:hover {
 }
 
 #Hours-Content p{
-	line-height: 35px;
+	line-height: 30px;
 }
 
 footer p{
@@ -356,9 +366,9 @@ footer p{
 		scroll-margin: 20%;
 	}
 
-	.carousel-item-a{
-		width: 17.5em;
-		height: auto;
+	.carousel-item-c{
+		width: 25vw;
+		height: 30vw;
 	}
 
 	.grid-item-g{
@@ -368,22 +378,28 @@ footer p{
 }
 
 @media only screen and (max-width: 1360px) {
-	#Carousel{
+	#Carousel-Crew, #Carousel-Gallery{
 		display: block;
 	}
-	#Crew{
+	#Crew, #Gallery-Content{
 		display: none;
+	}
+
+	.carousel-item-g{
+		border-radius: 16px;
+		width: 35vw;
+		height: 35vw;
+		box-shadow: 3px 3px 5px 6px #ccc;
+		margin-bottom: 1.5rem;
+	}
+
+	#logo{
+		width: 20.5rem;
 	}
 }
 
 @media only screen and (max-width: 1200px) {
-	/*----------Gallery----------*/
-	#Gallery-Content {
-		grid-template-columns: auto auto;
-		justify-items: center;
-		grid-gap: 1rem 0rem;
-	}	
-
+	/*----------Contact----------*/	
 	#Contact-Content{
 		flex-direction: column;
 	}
@@ -395,6 +411,26 @@ footer p{
 
 	iframe{
 		margin-top: 4.5em;
+		width: 30rem;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	/*----------HTMLPage----------*/
+	h1 {
+		font-size: 2.25rem;
+	}
+
+	h2 {
+		font-size: 2.75rem;
+	}
+
+	h3 {
+		font-size: 1rem;
+	}
+
+	p {
+		font-size: 1rem;
 	}
 }
 
@@ -403,13 +439,13 @@ footer p{
 	/*----------HTMLPage----------*/
 	iframe{
 		margin-top: 40px;
-		width: 100%;
-		height: 25em;
+		width: 17.5em; /*30rem;*/
+		height: 20em;
 	}
 
 	.container{
 		padding: 7.5em 3em 3em 3em;
-	}
+	}	
 
 	/*----------Home----------*/
 	#Home{
@@ -427,19 +463,28 @@ footer p{
 	}
 
 	#logo{
-		width: 275px;
-		margin: 25px;
+		width: 17.5rem;
+		margin: 15px;
 	}
 
 	/*----------About----------*/
 	#About > span{
-		width: 120%;
+		width: 23rem;
 	}
 
-	/*----------About----------*/
-	#Contact-Conent{
-		width: 0%;
+	.carousel-item-c{
+		width:	15em;
+		height: 20em;
 	}
+
+	/*----------Gallery----------*/
+
+	.carousel-item-g{
+		width:	15em;
+		height: 15em;
+	}
+
+	/*----------Contact----------*/
 	#Contact-Details{
 		width: 100%;
 	}
@@ -466,7 +511,7 @@ footer p{
 	user-select: none;
   }
 
-  .dot {
+  .dot-c, .dot-g {
 	cursor: pointer;
 	height: 10px;
 	width: 10px;
@@ -477,7 +522,7 @@ footer p{
 	transition: background-color 0.6s ease;
   }
   
-  .active, .dot:hover {
+  .active, .dot-c:hover, .dot-g:hover {
 	background-color: #717171;
   }
   
