@@ -434,7 +434,6 @@ footer p{
 	}
 }
 
-
 @media only screen and (max-width: 900px) {
 	/*----------HTMLPage----------*/
 	iframe{
@@ -478,7 +477,6 @@ footer p{
 	}
 
 	/*----------Gallery----------*/
-
 	.carousel-item-g{
 		width:	15em;
 		height: 15em;
