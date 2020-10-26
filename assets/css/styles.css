@@ -43,6 +43,7 @@ nav {
 	color: white;
 	position: fixed;
 	z-index: 99;
+	transition: background-color 400ms ease-in;
 }
 
 .nav-logo{
