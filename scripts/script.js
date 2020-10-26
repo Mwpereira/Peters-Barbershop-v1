@@ -49,6 +49,16 @@ navBackground();
 
 let scrollMargin = 0;
 
+if (window.innerWidth > 1600) {
+	scrollMargin = 10;
+}
+else if (window.innerWidth <= 900){
+	scrollMargin = 50;
+}
+else{
+	scrollMargin = 0;
+}
+
 window.onresize = function(event) {
     if (window.innerWidth > 1600) {
 		scrollMargin = 10;
