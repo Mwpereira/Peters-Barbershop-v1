@@ -413,11 +413,6 @@ footer p{
 		display: none;
 	}
 
-	/*----------Gallery----------*/
-	#Gallery-Content{
-		display: none;
-	}
-
 	.gallery{
 		display: block;
 		width: 85vw;
@@ -434,12 +429,20 @@ footer p{
 		height: 45vw;
 	}
 
+	/*----------Gallery----------*/
+	#Gallery-Content{
+		display: none;
+	}
+
 	.grid-item-g{
 		width:	45vw;
 		height: 45vw;
 	}
 
 	/*----------Contact----------*/
+	#Contact > h2{
+		white-space: nowrap;
+	}
 	#Contact-Content{
 		flex-direction: column;
 	}
