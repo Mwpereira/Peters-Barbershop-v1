@@ -5,16 +5,13 @@
 	box-sizing: border-box;
 }
 
-html{
-	background-color: white;
-}
-
 div {
 	display: block;
 }
 
 body{
 	font-family: 'Montserrat', sans-serif;
+	background-color: rgb(255, 255, 255);
 }
 
 h2{
@@ -68,8 +65,8 @@ nav {
 	list-style: none;
 }
 
-li:hover {
-	text-decoration: underline;
+li:hover a{
+	color: rgb(255, 174, 66);
 }
 
 .nav-links a {
@@ -77,7 +74,7 @@ li:hover {
 	letter-spacing: 3px;
 	font-weight: bold;
 	font-size: 16px;
-	color: black;
+	color: white;
 }
 
 .burger {
@@ -114,11 +111,11 @@ li:hover {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 50%;
+		width: 100%;
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in;
 		justify-content: space-around;
-		background: whitesmoke;
+		background: linear-gradient(rgba(0, 0, 0, 0.95),rgba(0, 0, 0, 0.95));
 	}
 
 	.nav-links li {
@@ -131,7 +128,7 @@ li:hover {
 }
 
 .is-solid{
-	background-image: linear-gradient(rgb(208, 206, 209), rgb(218, 216, 217) );
+	background-color: rgb(36, 36, 36);
 }
 
 .nav-active {
@@ -165,16 +162,20 @@ li:hover {
 
 #Home {
 	height: 100vh;
-	background-image: url("../img/bg.jpg");
-	background-color: whitesmoke;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.20),
+		rgba(0, 0, 0, 0.20)
+	  ),
+	url("../img/bg.jpg") no-repeat center center fixed;
 	box-shadow: 3px 3px 5px 6px #ccc;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 #logo{
@@ -197,6 +198,7 @@ li:hover {
 	height: 60px;
 	width: 255px;
 	outline: none;
+	border-radius: 8px;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -205,13 +207,13 @@ li:hover {
 }
 
 #learnMoreBtn{
-	background: grey;
-	border-color: grey;
+	background: rgb(100, 100, 104);
+	border-color: rgb(100, 100, 104);
 }
 
 #bookAppointmentBtn{
-	background: orange;
-	border-color: orange;
+	background: rgb(255, 183, 51);
+	border-color: rgb(255, 183, 51);
 }
 
 /*--------------------About--------------------*/
@@ -224,24 +226,26 @@ li:hover {
 #Crew {
 	display: grid;
 	grid-template-columns: auto auto auto;
-	justify-items: space-evenly;
-	align-content: space-evenly;
+	justify-content: center;
 	text-align: center;
-	grid-gap: 4rem;
-	height: auto;
+	grid-gap: 5vw;
 }
 
-#Carousel-Crew{
+.gallery{
 	display: none;
 }
 
-#About-Content p{
+#About-Content p, .gallery-cell{
 	font-weight: 700;
 	line-height: 5rem;
 	font-family: 'Merienda One', cursive;
   	color: rgba(0,0,0,0.7);
 	text-shadow: 3px 3px 3px #fff;
 	text-align: center;
+}
+
+.gallery-cell{
+	line-height: 3em;
 }
 
 #About > span{
@@ -255,18 +259,18 @@ li:hover {
 
 #About > span p{
 	font-style: italic;
-	margin: 1.5rem 3.75rem 0.625rem 3.75rem;
+	margin: 1.5rem 0rem 0.625rem 0rem;
 }
 
-.carousel-item-c {
-	border-radius: 16px;
-	width: 20rem;
-	height: 25rem;
-	box-shadow: 3px 3px 5px 6px #ccc;
+#Crew p{
+	font-size: 1.75rem;
 }
 
-#Crew, #Carousel-Crew p{
-	font-size: 1.35rem;
+.grid-item-c {
+	border-radius: 6px;
+	width: 22.5vw;
+	height: 27.5vw;
+	box-shadow: 1px 1px 2px 3px #ccc;
 }
 
 /*--------------------Gallery--------------------*/
@@ -276,26 +280,22 @@ li:hover {
 	align-items: center;
 }
 
-#Carousel-Gallery{
-	display: none;
-}
-
 #Gallery-Content{
 	display: grid;
 	grid-template-columns: auto auto auto;
 	justify-items: space-evenly;
 	align-content: space-evenly;
-	grid-gap: 2.25rem;
+	grid-gap: 5vw;
 	height: auto;
 }
 
 .grid-item-g {
 	border-radius: 16px;
-	width: 25rem;
-	height: 25rem;
+	width: 22.5vw;
+	height: 22.5vw;
 	justify-items: center;
 	align-items: center;
-	box-shadow: 3px 3px 5px 6px #ccc;
+	box-shadow: 1px 1px 2px 3px #ccc;
 }
 
 /*--------------------Contact--------------------*/
@@ -303,7 +303,6 @@ li:hover {
 #Contact{
 	justify-content: space-evenly;
 	align-items: center;
-	margin-bottom: 0rem;
 }
 
 #Contact span{
@@ -320,7 +319,7 @@ li:hover {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	width: 95%;
+	width: 100%;
 }
 
 #Contact-Details{
@@ -347,7 +346,7 @@ li:hover {
 }
 
 #Hours-Content p{
-	line-height: 30px;
+	line-height: 34px;
 }
 
 footer p{
@@ -360,62 +359,7 @@ footer p{
 
 /*--------------------MediaQueries--------------------*/
 
-@media only screen and (max-width: 1540px) {
-	/*----------HTMLPage----------*/
-	body div {
-		scroll-margin: 20%;
-	}
-
-	.carousel-item-c{
-		width: 25vw;
-		height: 30vw;
-	}
-
-	.grid-item-g{
-		width: 90%;
-		height: auto;
-	}
-}
-
-@media only screen and (max-width: 1360px) {
-	#Carousel-Crew, #Carousel-Gallery{
-		display: block;
-	}
-	#Crew, #Gallery-Content{
-		display: none;
-	}
-
-	.carousel-item-g{
-		border-radius: 16px;
-		width: 35vw;
-		height: 35vw;
-		box-shadow: 3px 3px 5px 6px #ccc;
-		margin-bottom: 1.5rem;
-	}
-
-	#logo{
-		width: 20.5rem;
-	}
-}
-
 @media only screen and (max-width: 1200px) {
-	/*----------Contact----------*/	
-	#Contact-Content{
-		flex-direction: column;
-	}
-
-	#Social-Links{
-		display: flex;
-		flex-direction: row;
-	}
-
-	iframe{
-		margin-top: 4.5em;
-		width: 30rem;
-	}
-}
-
-@media only screen and (max-width: 1024px) {
 	/*----------HTMLPage----------*/
 	h1 {
 		font-size: 2.25rem;
@@ -432,111 +376,98 @@ footer p{
 	p {
 		font-size: 1rem;
 	}
-}
-
-@media only screen and (max-width: 900px) {
-	/*----------HTMLPage----------*/
-	iframe{
-		margin-top: 40px;
-		width: 20em; /*30rem;*/
-		height: 20em;
-	}
 
 	.container{
 		padding: 7.5em 3em 3em 3em;
 	}	
 
 	/*----------Home----------*/
-	#Home{
-		background-image: url("../img/bg-mobile.jpg");
-	}	
+	#logo{
+		width: 20em;
+	}
+
+	#Home {
+		background: linear-gradient(
+		rgba(0, 0, 0, 0.20),
+		rgba(0, 0, 0, 0.20)
+	  	),
+		url("../img/bg-mobile.jpg");
+	}
 
 	#Home > span{
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 225px;
 	}
 
 	#Home button{
 		margin: 2.5px;
 	}
 
-	#logo{
-		width: 17.5rem;
-		margin: 15px;
-	}
-
 	/*----------About----------*/
 	#About > span{
-		width: 23rem;
+		width: 80vw;
 	}
 
-	.carousel-item-c{
-		width:	15em;
-		height: 20em;
+	#About-Content{
+		display: none;
 	}
 
 	/*----------Gallery----------*/
-	.carousel-item-g{
-		width:	15em;
-		height: 15em;
+	#Gallery-Content{
+		display: none;
+	}
+
+	.gallery{
+		display: block;
+		width: 85vw;
+		height: auto;
+		margin-bottom: 3em;
+	}
+
+	.gallery-cell{
+		text-align: center;
+	}
+
+	.grid-item-c{
+		width:	35vw;
+		height: 45vw;
+	}
+
+	.grid-item-g{
+		width:	45vw;
+		height: 45vw;
 	}
 
 	/*----------Contact----------*/
+	#Contact-Content{
+		flex-direction: column;
+	}
 	#Contact-Details{
-		width: 100%;
+		width: 80vw;
+	}
+
+	iframe{
+		width: 80vw;
+		height: 20em;
+		margin-top: 5vw;
+	}
+
+@media only screen and (max-width: 900px) {
+	/*----------HTMLPage----------*/
+	.container{
+		padding: 3em 3em 3em 3em;
+	}
+
+	/*----------About----------*/
+	.grid-item-c{
+		width:	15em;
+		height: 19em;
+	}
+	
+	/*----------Gallery----------*/
+	.grid-item-g{
+		width:	19em;
+		height: 19em;
 	}
 }
-
-/*----------Carousel----------*/
-.slideshow-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-  }
-    
-  .prev, .next {
-	cursor: pointer;
-	width: auto;
-	padding: 12px;
-	margin: 1rem;
-	color: black;
-	font-weight: bold;
-	font-size: 18px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-  }
-
-  .dot-c, .dot-g {
-	cursor: pointer;
-	height: 10px;
-	width: 10px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot-c:hover, .dot-g:hover {
-	background-color: #717171;
-  }
-  
-  .fade {
-	-webkit-animation-name: fade;
-	-webkit-animation-duration: 1.5s;
-	animation-name: fade;
-	animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-	from {opacity: .4}
-	to {opacity: 1}
-  }
-  
-  @keyframes fade {
-	from {opacity: .4}
-	to {opacity: 1}
-  }
+}

@@ -16,6 +16,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<!---Flickity--->
+	<link rel="stylesheet" href="./assets/css/flickity.css" media="screen">
+	<!---AOS--->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!---Javascript--->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>	
@@ -73,50 +76,41 @@
 
 	<!--------------------About-------------------->
 	<div id="About" class="container" data-aos="fade-right">
-			<h2>Our Crew</h2>
+			<h2>Our Crew.</h2>
 			<div id="About-Content">
 				<div id="Crew">
 					<span>
-						<img src="./assets/img/peter.jpg" class="carousel-item-c">
+						<img src="./assets/img/peter.jpg" class="grid-item-c">
 						<p>Peter</p>
 					</span>
 					<span>
-						<img src="./assets/img/marcello.jpg" class="carousel-item-c">
+						<img src="./assets/img/marcello.jpg" class="grid-item-c">
 						<p>Marcello</p>
 					</span>
 					<span>
-						<img src="./assets/img/sebastian.jpg" class="carousel-item-c">
+						<img src="./assets/img/sebastian.jpg" class="grid-item-c">
 						<p>Sebastian</p>
 					</span>
 				</div>
-				<div id="Carousel-Crew">
-					<span class="slideshow-container">
-						<a class="prev" onclick="plusSlidesCrew(-1)">&#10094;</a>
-
-						<span class="images-c fade">
-							<img src="./assets/img/peter.jpg" class="carousel-item-c" />
-						</span>
-						<span class="images-c fade">
-							<img src="./assets/img/marcello.jpg" class="carousel-item-c" />
-						</span>
-						<span class="images-c fade">
-							<img src="./assets/img/sebastian.jpg" class="carousel-item-c" />
-						</span>
-					
-						<span>
-							<a class="next" onclick="plusSlidesCrew(+1)">&#10095;</a>	
-						</span>
-						<br />
+			</div>
+			<div class="gallery js-flickity">
+				<div class="gallery-cell">
+					<span>
+						<img src="./assets/img/peter.jpg" class="grid-item-c">
+						<p>Peter</p>
 					</span>
-
-					<p id="BarberName">Michael</p>
-				
-					<div style="text-align:center;">
-							<span class="dot-c" onclick="currentSlideCrew(1)"></span>
-							<span class="dot-c" onclick="currentSlideCrew(2)"></span>
-							<span class="dot-c" onclick="currentSlideCrew(3)"></span>
-					</div>
-					
+				</div>
+				<div class="gallery-cell">
+					<span>
+						<img src="./assets/img/marcello.jpg" class="grid-item-c">
+						<p>Marcello</p>
+					</span>
+				</div>
+				<div class="gallery-cell">
+					<span>
+						<img src="./assets/img/sebastian.jpg" class="grid-item-c">
+						<p>Sebastian</p>
+					</span>
 				</div>
 			</div>
 			<span>
@@ -131,7 +125,7 @@
 
 	<!--------------------Gallery-------------------->
 	<div id="Gallery" class="container" data-aos="fade-right">
-		<h2>Gallery</h2>
+		<h2>Gallery.</h2>
 		<div id="Gallery-Content">
 			<img src="./assets/img/img0.jpg" class="grid-item-g">
 			<img src="./assets/img/img1.jpg" class="grid-item-g">
@@ -140,50 +134,31 @@
 			<img src="./assets/img/img4.jpg" class="grid-item-g">
 			<img src="./assets/img/img5.jpg" class="grid-item-g">
 		</div>
-		<div id="Carousel-Gallery">
-			<span class="slideshow-container">
-				<a class="prev" onclick="plusSlidesGallery(-1)">&#10094;</a>
-			
-				<span class="images-g fade">
-					<img src="./assets/img/img0.jpg" class="carousel-item-g" />
-				</span>
-				<span class="images-g fade">
-					<img src="./assets/img/img1.jpg" class="carousel-item-g" />
-				</span>
-				<span class="images-g fade">
-					<img src="./assets/img/img2.jpg" class="carousel-item-g" />
-				</span>
-				<span class="images-g fade">
-					<img src="./assets/img/img3.jpg" class="carousel-item-g" />
-				</span>
-				<span class="images-g fade">
-					<img src="./assets/img/img4.jpg" class="carousel-item-g" />
-				</span>
-				<span class="images-g fade">
-					<img src="./assets/img/img5.jpg" class="carousel-item-g" />
-				</span>
-			
-				<span>
-					<a class="next" onclick="plusSlidesGallery(+1)">&#10095;</a>
-				</span>
-				<br />
-			</span>
-
-			<div style="text-align:center;">
-					<span class="dot-g" onclick="currentSlideGallery(1)"></span>
-					<span class="dot-g" onclick="currentSlideGallery(2)"></span>
-					<span class="dot-g" onclick="currentSlideGallery(3)"></span>
-					<span class="dot-g" onclick="currentSlideGallery(4)"></span>
-					<span class="dot-g" onclick="currentSlideGallery(5)"></span>
-					<span class="dot-g" onclick="currentSlideGallery(6)"></span>
+		<div class="gallery js-flickity">
+			<div class="gallery-cell">
+				<img src="./assets/img/img0.jpg" class="grid-item-g">
 			</div>
-			
+			<div class="gallery-cell">
+				<img src="./assets/img/img1.jpg" class="grid-item-g">
+			</div>
+			<div class="gallery-cell">
+				<img src="./assets/img/img2.jpg" class="grid-item-g">
+			</div>
+			<div class="gallery-cell">
+				<img src="./assets/img/img3.jpg" class="grid-item-g">
+			</div>
+			<div class="gallery-cell">
+				<img src="./assets/img/img4.jpg" class="grid-item-g">
+			</div>
+			<div class="gallery-cell">
+				<img src="./assets/img/img5.jpg" class="grid-item-g">
+			</div>
 		</div>
 	</div>
 
 	<!--------------------Contact-------------------->
 	<div id="Contact" class="container" data-aos="fade-right">
-		<h2>Contact Us</h2>
+		<h2>Contact Us.</h2>
 		<div id="Contact-Content">
 			<div id="Contact-Details">
 				<span>
@@ -231,6 +206,10 @@
 	<footer>
 		<p>All trademarks and logos are the property of their respective owners.</p>
 	</footer>
+
+	
+
+	<script src="./scripts/flickity.pkgd.min.js"></script>
 	<script>
 		AOS.init();
 	</script>	
