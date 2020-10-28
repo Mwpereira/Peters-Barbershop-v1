@@ -1,477 +1,466 @@
 /*--------------------HTMLPage--------------------*/
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 div {
-	display: block;
+    display: block;
 }
 
-body{
-	font-family: 'Montserrat', sans-serif;
-	background-color: rgb(255, 255, 255);
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(255, 255, 255);
 }
 
-h2{
-	letter-spacing: 3px;
-	font-size: 3rem;
-	margin-bottom: 50px;
-	text-align: center;
+h2 {
+    letter-spacing: 3px;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-p{
-	font-size: 1.125rem;
+p {
+    font-size: 1.125rem;
 }
 
-.container{
-	display: flex;
-	flex-direction: column;
-	padding: 5.3125rem 5.3125rem 5.3125rem 5.3125rem;
-	width: 100%;
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 5.3125rem 5.3125rem 5.3125rem 5.3125rem;
+    width: 100%;
 }
 
 /*--------------------NavBar--------------------*/
-
 nav {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	min-height: 8vh;
-	width: 100%;
-	color: white;
-	position: fixed;
-	z-index: 99;
-	transition: background-color 400ms ease-in;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    width: 100%;
+    color: white;
+    position: fixed;
+    z-index: 99;
+    transition: background-color 400ms ease-in;
 }
 
-.nav-logo{
-	width: 250px;
+.nav-logo {
+    width: 250px;
 }
 
-.nav-logo img{
-	display: none;
-	width: 60px;
-	margin-top: .1rem;
+.nav-logo img {
+    display: none;
+    width: 60px;
+    margin-top: 0.1rem;
 }
 
 .nav-links {
-	display: flex;
-	justify-content: space-around;
-	width: 37.5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 37.5rem;
 }
 
 .nav-links li {
-	list-style: none;
+    list-style: none;
 }
 
-li:hover a{
-	color: rgb(255, 174, 66);
+li:hover a {
+    color: rgb(255, 174, 66);
 }
 
 .nav-links a {
-	text-decoration: none;
-	letter-spacing: 3px;
-	font-weight: bold;
-	font-size: 16px;
-	color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
 }
 
 .burger {
-	display: none;
-	cursor: pointer;
+    display: none;
+    cursor: pointer;
 }
 
 .burger div {
-	width: 25px;
-	height: 3px;
-	background-color: white;
-	margin: 5px;
-	transition: all 0.3s ease;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1024px) {
-	.nav-links {
-		display: flex;
-		justify-content: space-around;
-		width: 60%;
-	}
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 768px) {
-	body {
-		overflow-x: hidden;
-	}
+    body {
+        overflow-x: hidden;
+    }
 
-	.nav-links {
-		position: absolute;
-		right: 0px;
-		height: 45vh;
-		top: 8vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		transform: translateX(100%);
-		transition: transform 0.5s ease-in;
-		justify-content: space-around;
-		background: linear-gradient(rgba(0, 0, 0, 0.95),rgba(0, 0, 0, 0.95));
-	}
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 45vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        justify-content: space-around;
+        background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
+    }
 
-	.nav-links li {
-		opacity: 0%;
-	}
+    .nav-links li {
+        opacity: 0%;
+    }
 
-	.burger {
-		display: block;
-	}
+    .burger {
+        display: block;
+    }
 }
 
-.is-solid{
-	background-color: rgb(36, 36, 36);
+.is-solid {
+    background-color: rgb(36, 36, 36);
 }
 
 .nav-active {
-	transform: translateX(0%);
+    transform: translateX(0%);
 }
 
 .toggle .line1 {
-	transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line2 {
-	opacity: 0;
+    opacity: 0;
 }
 
 .toggle .line3 {
-	transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 @keyframes navLinkFade {
-	from {
-		opacity: 0;
-		transform: translateX(50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0px);
-	}
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 /*--------------------Home--------------------*/
-
 #Home {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: linear-gradient(
-		rgba(0, 0, 0, 0.20),
-		rgba(0, 0, 0, 0.20)
-	  ),
-	url("../img/bg.jpg") no-repeat center center fixed;
-	box-shadow: 3px 3px 5px 6px #ccc;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("../img/bg.jpg") no-repeat center center fixed;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-#logo{
-	width: 23.5%;
-	margin: 1.03vh;
+#logo {
+    width: 23.5%;
+    margin: 1.03vh;
 }
 
-#Home > span{
-	margin-bottom: 19.09vh;
+#Home > span {
+    margin-bottom: 19.09vh;
 }
 
-#Home button{
-	cursor: pointer;
-	border-style: solid;
-	border-width: 4px;
-	text-align: center;
-	color: white;
-	font-weight: bold;
-	font-size: 20px;
-	height: 60px;
-	width: 255px;
-	outline: none;
-	border-radius: 8px;
-	font-family: 'Montserrat', sans-serif;
+#Home button {
+    cursor: pointer;
+    border-style: solid;
+    border-width: 4px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    height: 60px;
+    width: 255px;
+    outline: none;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
 }
 
-#Home button:hover{
-	color: black;
+#Home button:hover {
+    color: black;
 }
 
-#learnMoreBtn{
-	background: rgb(100, 100, 104);
-	border-color: rgb(100, 100, 104);
+#learnMoreBtn {
+    background: rgb(100, 100, 104);
+    border-color: rgb(100, 100, 104);
 }
 
-#bookAppointmentBtn{
-	background: rgb(255, 183, 51);
-	border-color: rgb(255, 183, 51);
+#bookAppointmentBtn {
+    background: rgb(255, 183, 51);
+    border-color: rgb(255, 183, 51);
 }
 
 /*--------------------About--------------------*/
-
-#About{
-	justify-content: space-evenly;
-	align-items: center;
+#About {
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #Crew {
-	display: grid;
-	grid-template-columns: auto auto auto;
-	justify-content: center;
-	text-align: center;
-	grid-gap: 5vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 5vw;
 }
 
-.gallery{
-	display: none;
+.gallery {
+    display: none;
 }
 
-#About-Content p, .gallery-cell{
-	font-weight: 700;
-	line-height: 5rem;
-	font-family: 'Merienda One', cursive;
-  	color: rgba(0,0,0,0.7);
-	text-shadow: 3px 3px 3px #fff;
-	text-align: center;
+#About-Content p,
+.gallery-cell {
+    font-weight: 700;
+    line-height: 5rem;
+    font-family: "Merienda One", cursive;
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: 3px 3px 3px #fff;
+    text-align: center;
 }
 
-.gallery-cell{
-	line-height: 3em;
+.gallery-cell {
+    line-height: 3em;
 }
 
-#About > span{
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	justify-items: center;
-	align-items: center;
-	width: 80%;
+#About > span {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
 }
 
-#About > span p{
-	font-style: italic;
-	margin: 1.5rem 0rem 0.625rem 0rem;
+#About > span p {
+    font-style: italic;
+    margin: 1.5rem 0rem 0.625rem 0rem;
 }
 
-#Crew p{
-	font-size: 1.75rem;
+#Crew p {
+    font-size: 1.75rem;
 }
 
 .grid-item-c {
-	border-radius: 6px;
-	width: 22.5vw;
-	height: 27.5vw;
-	box-shadow: 1px 1px 2px 3px #ccc;
+    border-radius: 6px;
+    width: 22.5vw;
+    height: 27.5vw;
+    box-shadow: 1px 1px 2px 3px #ccc;
 }
 
 /*--------------------Gallery--------------------*/
-
-#Gallery{
-	justify-content: space-evenly;
-	align-items: center;
+#Gallery {
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-#Gallery-Content{
-	display: grid;
-	grid-template-columns: auto auto auto;
-	justify-items: space-evenly;
-	align-content: space-evenly;
-	grid-gap: 5vw;
-	height: auto;
+#Gallery-Content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: space-evenly;
+    align-content: space-evenly;
+    grid-gap: 5vw;
+    height: auto;
 }
 
 .grid-item-g {
-	border-radius: 16px;
-	width: 22.5vw;
-	height: 22.5vw;
-	justify-items: center;
-	align-items: center;
-	box-shadow: 1px 1px 2px 3px #ccc;
+    border-radius: 16px;
+    width: 22.5vw;
+    height: 22.5vw;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 1px 1px 2px 3px #ccc;
 }
 
 /*--------------------Contact--------------------*/
-
-#Contact{
-	justify-content: space-evenly;
-	align-items: center;
+#Contact {
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-#Contact span{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	padding: 10px;
+#Contact span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
 }
 
-#Contact-Content{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	width: 100%;
+#Contact-Content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
-#Contact-Details{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	text-align: center;
-	width: 40rem;
+#Contact-Details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 40rem;
 }
 
-#Social-Links{
-	cursor: pointer;
+#Social-Links {
+    cursor: pointer;
 }
 
-#Social-Links span:hover{
-	cursor: pointer;
-	transform: scale(1.25);
-	transition: transform 0.25s ease-in;
+#Social-Links span:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+    transition: transform 0.25s ease-in;
 }
 
-#Hours{
-	margin-top: 1.25rem;
+#Hours {
+    margin-top: 1.25rem;
 }
 
-#Hours-Content p{
-	line-height: 34px;
+#Hours-Content p {
+    line-height: 34px;
 }
 
-footer p{
-	width: 100%;
-	text-align: center;
-	font-size: 12px;
-	padding: 3.125rem 3.125rem 0rem 3.125rem;
-	margin-bottom: 1.5625rem;
+footer p {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    padding: 3.125rem 3.125rem 0rem 3.125rem;
+    margin-bottom: 1.5625rem;
 }
 
 /*--------------------MediaQueries--------------------*/
-
 @media only screen and (max-width: 1200px) {
-	/*----------HTMLPage----------*/
-	h1 {
-		font-size: 2.25rem;
-	}
+    /*----------HTMLPage----------*/
+    h1 {
+        font-size: 2.25rem;
+    }
 
-	h2 {
-		font-size: 2.75rem;
-	}
+    h2 {
+        font-size: 2.75rem;
+    }
 
-	h3 {
-		font-size: 1rem;
-	}
+    h3 {
+        font-size: 1rem;
+    }
 
-	p {
-		font-size: 1rem;
-	}
+    p {
+        font-size: 1rem;
+    }
 
-	.container{
-		padding: 7.5em 3em 3em 3em;
-	}	
+    .container {
+        padding: 7.5em 3em 3em 3em;
+    }
 
-	/*----------Home----------*/
-	#logo{
-		width: 20em;
-	}
+    /*----------Home----------*/
+    #logo {
+        width: 20em;
+    }
 
-	#Home {
-		background: linear-gradient(
-		rgba(0, 0, 0, 0.20),
-		rgba(0, 0, 0, 0.20)
-	  	),
-		url("../img/bg-mobile.jpg");
-	}
+    #Home {
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url("../img/bg-mobile.jpg");
+    }
 
-	#Home > span{
-		display: flex;
-		flex-direction: column;
-	}
+    #Home > span {
+        display: flex;
+        flex-direction: column;
+    }
 
-	#Home button{
-		margin: 2.5px;
-	}
+    #Home button {
+        margin: 2.5px;
+    }
 
-	/*----------About----------*/
-	#About > span{
-		width: 80vw;
-	}
+    /*----------About----------*/
+    #About > span {
+        width: 80vw;
+    }
 
-	#About-Content{
-		display: none;
-	}
+    #About-Content {
+        display: none;
+    }
 
-	.gallery{
-		display: block;
-		width: 85vw;
-		height: auto;
-		margin-bottom: 3em;
-	}
+    .gallery {
+        display: block;
+        width: 85vw;
+        height: auto;
+        margin-bottom: 3em;
+    }
 
-	.gallery-cell{
-		text-align: center;
-	}
+    .gallery-cell {
+        text-align: center;
+    }
 
-	.grid-item-c{
-		width:	35vw;
-		height: 45vw;
-	}
+    .grid-item-c {
+        width: 35vw;
+        height: 45vw;
+    }
 
-	/*----------Gallery----------*/
-	#Gallery-Content{
-		display: none;
-	}
+    /*----------Gallery----------*/
+    #Gallery-Content {
+        display: none;
+    }
 
-	.grid-item-g{
-		width:	45vw;
-		height: 45vw;
-	}
+    .grid-item-g {
+        width: 45vw;
+        height: 45vw;
+    }
 
-	/*----------Contact----------*/
-	#Contact > h2{
-		white-space: nowrap;
-	}
-	#Contact-Content{
-		flex-direction: column;
-	}
-	#Contact-Details{
-		width: 80vw;
-	}
+    /*----------Contact----------*/
+    #Contact > h2 {
+        white-space: nowrap;
+    }
+    #Contact-Content {
+        flex-direction: column;
+    }
+    #Contact-Details {
+        width: 80vw;
+    }
 
-	iframe{
-		width: 80vw;
-		height: 20em;
-		margin-top: 5vw;
-	}
+    iframe {
+        width: 80vw;
+        height: 20em;
+        margin-top: 5vw;
+    }
 
-@media only screen and (max-width: 900px) {
-	/*----------HTMLPage----------*/
-	.container{
-		padding: 3em 3em 3em 3em;
-	}
+    @media only screen and (max-width: 900px) {
+        /*----------HTMLPage----------*/
+        .container {
+            padding: 3em 3em 3em 3em;
+        }
 
-	/*----------About----------*/
-	.grid-item-c{
-		width:	15em;
-		height: 19em;
-	}
-	
-	/*----------Gallery----------*/
-	.grid-item-g{
-		width:	19em;
-		height: 19em;
-	}
-}
+        /*----------About----------*/
+        .grid-item-c {
+            width: 15em;
+            height: 19em;
+        }
+
+        /*----------Gallery----------*/
+        .grid-item-g {
+            width: 19em;
+            height: 19em;
+        }
+    }
 }
